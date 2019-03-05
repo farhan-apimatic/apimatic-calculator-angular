@@ -203,13 +203,13 @@ The singleton instance of the ``` SimpleCalculator ``` class can be accessed via
 	});
 ```
 
-### <a name="new_endpoint_it_is"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculator.newEndpointItIs") newEndpointItIs
+### <a name="build_via_jenkins1"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculator.buildViaJenkins1") buildViaJenkins1
 
 > Calculates the expression using the specified operation.
 
 
 ```javascript
-function newEndpointItIs(operation, x, y)
+function buildViaJenkins1(operation, x, y)
 ```
 #### Parameters
 
@@ -232,7 +232,7 @@ function newEndpointItIs(operation, x, y)
         var y = 5;
 
 
-		var result = SimpleCalculator.newEndpointItIs(operation, x, y);
+		var result = SimpleCalculator.buildViaJenkins1(operation, x, y);
         //Function call returns a promise
         result.then(function(success){
 			//success case
