@@ -29,11 +29,11 @@ angular.module('APIMATICCalculatorLib')
                 
                 //prepare query string for API call
                 var _baseUri = Configuration.BASEURI;
-                var _queryBuilder = _baseUri + '/{operation}';
+                var _queryBuilder = _baseUri + '/{Operation}';
                 
                 // Process template parameters
                 _queryBuilder = APIHelper.appendUrlWithTemplateParameters(_queryBuilder, {
-                    'operation': (operation !== null) ? operation : null
+                    'Operation': (operation !== null) ? operation : null
                 });
 
                 // Process query parameters
