@@ -203,13 +203,13 @@ The singleton instance of the ``` SimpleCalculator ``` class can be accessed via
 	});
 ```
 
-### <a name="calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculator.calculate") calculate
+### <a name="calculate123"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculator.calculate123") calculate123
 
 > Calculates the expression using the specified operation.
 
 
 ```javascript
-function calculate(operation, x, y)
+function calculate123(operation, x, y)
 ```
 #### Parameters
 
@@ -232,7 +232,7 @@ function calculate(operation, x, y)
         var y = 5;
 
 
-		var result = SimpleCalculator.calculate(operation, x, y);
+		var result = SimpleCalculator.calculate123(operation, x, y);
         //Function call returns a promise
         result.then(function(success){
 			//success case
