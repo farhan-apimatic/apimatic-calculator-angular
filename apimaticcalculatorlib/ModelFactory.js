@@ -7,18 +7,14 @@
 ;(function (angular) {
 'use strict';
 angular.module('APIMATICCalculatorLib')
-    .factory('ModelFactory', ['NewRequest', 'DATA', 'New', 'Advance',ModelFactory]);
+    .factory('ModelFactory', [ModelFactory]);
 
 	/**
 	 * Factory service to create instances of models and exception classes
 	 */
-    function ModelFactory(NewRequest, DATA, New, Advance) {
+    function ModelFactory() {
 
 		var classMap = {
-            NewRequest: NewRequest,
-            DATA: DATA,
-            New: New,
-            Advance: Advance
 		};
 
 		return {

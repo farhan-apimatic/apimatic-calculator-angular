@@ -96,16 +96,11 @@ Import the reference to the generated SDK files inside your html file like:
     <!-- API Controllers -->
     <script src="scripts/APIMATICCalculatorLib/Controllers/BaseController.js"></script>
     <script src="scripts/APIMATICCalculatorLib/Controllers/SimpleCalculator.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Controllers/API.js"></script>
 
 
     <!-- Models -->
     <script src="scripts/APIMATICCalculatorLib/Models/BaseModel.js"></script>
     <script src="scripts/APIMATICCalculatorLib/Models/OperationType.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Models/NewRequest.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Models/DATA.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Models/New.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Models/Advance.js"></script>
 
     ...
 </head>
@@ -196,7 +191,6 @@ app.run(function(Configuration) {
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [SimpleCalculator](#simple_calculator)
-* [API](#api)
 
 ## <a name="simple_calculator"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculator") SimpleCalculator
 
@@ -239,65 +233,6 @@ function calculate(operation, x, y)
 
 
 		var result = SimpleCalculator.calculate(operation, x, y);
-        //Function call returns a promise
-        result.then(function(success){
-			//success case
-			//getting context of response
-			console.log(success.getContext());
-		},function(err){
-			//failure case
-		});
-
-	});
-```
-
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="api"></a>![Class: ](https://apidocs.io/img/class.png ".API") API
-
-### Get singleton instance
-
-The singleton instance of the ``` API ``` class can be accessed via Dependency Injection.
-
-```js
-	app.controller("testController", function($scope, API){
-	});
-```
-
-### <a name="new"></a>![Method: ](https://apidocs.io/img/method.png ".API.new") new
-
-> TODO: Add a method description
-
-
-```javascript
-function new(body, cacheControl, contentType, postmanToken)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-
-	app.controller("testController", function($scope, API){
-        var body = new NewRequest({"key":"value"});
-        var cacheControl = 'cache-control';
-        var contentType = 'content-type';
-        var postmanToken = 'postman-token';
-
-
-		var result = API.new(body, cacheControl, contentType, postmanToken);
         //Function call returns a promise
         result.then(function(success){
 			//success case
