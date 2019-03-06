@@ -22,18 +22,18 @@ angular.module('APIMATICCalculatorLib')
              *
              * @return {promise<Precision>}
              */
-            buildViaJenkins1: function (operation, x, y) {
+            newEndpointItIs: function (operation, x, y) {
 
                 //Create promise to return
                 var _deffered = $q.defer();
                 
                 //prepare query string for API call
                 var _baseUri = Configuration.BASEURI;
-                var _queryBuilder = _baseUri + '/{Operation}';
+                var _queryBuilder = _baseUri + '/{operation}';
                 
                 // Process template parameters
                 _queryBuilder = APIHelper.appendUrlWithTemplateParameters(_queryBuilder, {
-                    'Operation': (operation !== null) ? operation : null
+                    'operation': (operation !== null) ? operation : null
                 });
 
                 // Process query parameters
