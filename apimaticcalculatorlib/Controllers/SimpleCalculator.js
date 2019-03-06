@@ -22,7 +22,7 @@ angular.module('APIMATICCalculatorLib')
              *
              * @return {promise<Precision>}
              */
-            newEndpointItIs: function (operation, x, y) {
+            calculate: function (operation, x, y) {
 
                 //Create promise to return
                 var _deffered = $q.defer();
@@ -45,19 +45,10 @@ angular.module('APIMATICCalculatorLib')
                 //validate and preprocess url
                 var _queryUrl = APIHelper.cleanUrl(_queryBuilder);
                 
-                // prepare headers
-                var _headers = {
-                    'gfdsfkl': Configuration.gfdsfkl,
-                    'dsfsdf': Configuration.dsfsdf
-                };
-
                 // prepare and invoke the API call request to fetch the response
                 var _config = {
                     method: 'GET',
                     queryUrl: _queryUrl,
-                    headers: _headers,
-                    username: Configuration.basicAuthUserName,
-                    password: Configuration.basicAuthPassword,
                 };
                 
                 var _response = new HttpClient(_config);

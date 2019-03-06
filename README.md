@@ -159,30 +159,8 @@ var app = angular.module('myApp', [APIMATICCalculatorLib]);
 // now controllers/services can be created which import
 // the factories provided by the sdk
 ```
-### Authentication
-In order to setup authentication and initialization of the Angular App, you need the following information.
+### 
 
-| Parameter | Description |
-|-----------|-------------|
-| gfdsfkl | sd |
-| dsfsdf | TODO: add a description |
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
-
-
-
-```js
-var app = angular.module('myApp', [APIMATICCalculatorLib]);
-
-app.run(function(Configuration) {
-    // Configuration parameters and credentials
-    Configuration.gfdsfkl = 'gfdsfkl'; // sd
-    Configuration.dsfsdf = 'ds';
-    Configuration.basicAuthUserName = 'basicAuthUserName'; // The username to use with basic authentication
-    Configuration.basicAuthPassword = 'basicAuthPassword'; // The password to use with basic authentication
-    
-});
-```
 
 
 
@@ -203,13 +181,13 @@ The singleton instance of the ``` SimpleCalculator ``` class can be accessed via
 	});
 ```
 
-### <a name="new_endpoint_it_is"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculator.newEndpointItIs") newEndpointItIs
+### <a name="calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculator.calculate") calculate
 
 > Calculates the expression using the specified operation.
 
 
 ```javascript
-function newEndpointItIs(operation, x, y)
+function calculate(operation, x, y)
 ```
 #### Parameters
 
@@ -232,7 +210,7 @@ function newEndpointItIs(operation, x, y)
         var y = 5;
 
 
-		var result = SimpleCalculator.newEndpointItIs(operation, x, y);
+		var result = SimpleCalculator.calculate(operation, x, y);
         //Function call returns a promise
         result.then(function(success){
 			//success case
