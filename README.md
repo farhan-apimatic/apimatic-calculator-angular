@@ -15,10 +15,10 @@ The following section describes how to use the generated SDK in an existing/new 
 Perform the following steps to configure angular and the SDK:
 + Make a `scripts` folder inside the root folder of the project. If you already have a `scripts` folder, skip to the next step.
 + Move the `angular.min.js` file inside the scripts folder. 
-+ Move the `APIMATICCalculatorDevOpsLib` folder inside the scripts folder.
++ Move the `APIMATICCalculatorLib` folder inside the scripts folder.
 + If any of the Custom Types in your API have `Date`/`Datetime` type fields or any endpoint has `Date`/`Datetime` response, you will need to download angular-moment and moment.js. Move these 2 files into the `scripts` folder as well.
 
-![folder-structure-image](https://apidocs.io/illustration/angularjs?step=folderStructure&workspaceFolder=APIMATIC%20Calculator%20DevOps-Angular&projectName=APIMATICCalculatorDevOpsLib)
+![folder-structure-image](https://apidocs.io/illustration/angularjs?step=folderStructure&workspaceFolder=APIMATIC%20Calculator-Angular&projectName=APIMATICCalculatorLib)
 
 ### 2. Open Project Folder
 Open an IDE/Text Editor for JavaScript like Sublime Text. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.  
@@ -26,7 +26,7 @@ Click on `File` and select `Open Folder`
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![open-folder-image](https://apidocs.io/illustration/angularjs?step=openFolder&workspaceFolder=APIMATIC%20Calculator%20DevOps-Angular)
+![open-folder-image](https://apidocs.io/illustration/angularjs?step=openFolder&workspaceFolder=APIMATIC%20Calculator-Angular)
 
 ### 3. Create an Angular Application
 Since Angular JS is used for client-side web development, in order to use the generated library, you will have to develop an application first.
@@ -63,7 +63,7 @@ Skip to the next step if you are working with an existing project and already ha
 </html>
 ```
 
-![initial-html-code-image](https://apidocs.io/illustration/angularjs?step=initialCode&workspaceFolder=APIMATIC%20Calculator%20DevOps-Angular)
+![initial-html-code-image](https://apidocs.io/illustration/angularjs?step=initialCode&workspaceFolder=APIMATIC%20Calculator-Angular)
 
 ### 5. Including links to Angular in HTML file
 Your HTML file needs to have a link to `angular.min.js` file to use Angular-JS. Add the link using `script` tags inside the `head` section of `index.html` like:
@@ -83,24 +83,24 @@ Import the reference to the generated SDK files inside your html file like:
 <head>
     ...
     <!-- Helper files -->
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Module.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Configuration.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/ModelFactory.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/ObjectMapper.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/APIHelper.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Http/Client/HttpContext.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Http/Client/HttpClient.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Http/Request/HttpRequest.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Http/Response/HttpResponse.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Module.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Configuration.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/ModelFactory.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/ObjectMapper.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/APIHelper.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Client/HttpContext.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Client/HttpClient.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Request/HttpRequest.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Response/HttpResponse.js"></script>
 
     <!-- API Controllers -->
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Controllers/BaseController.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Controllers/SimpleCalculator.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Controllers/BaseController.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Controllers/SimpleCalculator.js"></script>
 
 
     <!-- Models -->
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Models/BaseModel.js"></script>
-    <script src="scripts/APIMATICCalculatorDevOpsLib/Models/OperationType.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/BaseModel.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/OperationType.js"></script>
 
     ...
 </head>
@@ -141,7 +141,7 @@ In order to use the generated SDK's modules, controllers and factories, the proj
 Add the dependency like this:
 
 ```js
-var app = angular.module('myApp', ['APIMATICCalculatorDevOpsLib']);
+var app = angular.module('myApp', ['APIMATICCalculatorLib']);
 ```
 At this point, the SDK has been successfully included in your project. Further steps include using a service/factory from the generated SDK. To see working example of this, please head on [over here](#list-of-controllers) and choose any class to see its functions and example usage.  
 
@@ -155,7 +155,7 @@ To run the app, simply open up the `index.html` file in a browser.
 
 The Angular Application can be initialized as following:
 ```JavaScript
-var app = angular.module('myApp', [APIMATICCalculatorDevOpsLib]);
+var app = angular.module('myApp', [APIMATICCalculatorLib]);
 // now controllers/services can be created which import
 // the factories provided by the sdk
 ```
